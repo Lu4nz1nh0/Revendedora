@@ -1,2 +1,0 @@
-# Revendedora
-Projeto dos guri !!!
