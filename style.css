@@ -1,0 +1,1070 @@
+/* ----------------------------------------------------------- */
+
+/* estilização de tags */
+
+body {
+    /* reseta o estilo da página */
+
+    margin: 0;
+    user-select: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ----------------------------------------------------------- */
+
+/* classes */
+
+/* ----------------------------------------------------------- */
+
+/* navbar */
+
+.navbar{
+    /* configurando a navbar */
+
+    display: flex;
+    min-height: 6vh;
+    align-items: center;
+    background-color: #383941;
+    height: clamp(6vh, 6vw, 8vh);
+    padding: 1vh;
+}
+
+.navbar .logo{
+    /* configurando o logo da empresa */
+    
+    width: 4vw;
+    height: auto;
+    margin: auto 1vw;
+    cursor: pointer;
+    
+    /* configurando a animação */
+    
+    transition: transform 0.3s ease;
+}
+
+.navbar ul{
+    /* configurando a lista de elementos da navbar */
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.navbar li{
+    /* settando uma margem entre os elementos */
+
+    margin: 0 2vw;
+}
+
+.navbar a{
+    /* configurando os links */
+
+    color: white;
+    font-family: 'Abel';
+
+    text-decoration: none;
+    font-size: clamp(16px, 1.5vw, 32px);
+
+    /* configurando uma animação */
+
+    transition: font-size 0.3s ease;
+}
+
+.navbar .extra-image{
+    /* configurando as imagens da navbar */
+
+    width: 3.5vw;
+    height: auto;
+    margin-right: 1vw;
+    cursor: pointer;
+
+    /* configurando a animação */
+
+    transition: transform 0.3s ease;
+}
+
+.novidades{
+    /* configurando o título */
+
+    text-align: center;
+    font-family: 'Andika', sans-serif;
+    font-size: clamp(30px, 4vw, 60px);
+    margin-top: 20px;
+}
+
+/* ----------------------------------------------------------- */
+
+/* footer */
+
+.footer{
+    display: flex;
+    margin-top: 2vw;
+    min-height: 4vh;
+    align-items: center;
+    justify-content: start;
+    background-color: #383941;
+    padding: 1vw;
+}
+
+.footer ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.footer-item{
+    width: 20vw;
+    height: 10vh;
+}
+
+.footer li{
+    display: flex;
+    align-items: center;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    margin: 0 2vw;
+}
+
+.footer li img{
+    width: clamp(10px, 2vw, 80px);
+    height: auto;
+}
+
+.footer span{
+    color: white;
+    text-indent: clamp(0.8vh, 0.8vw, 6vw);
+    font-family: 'Abel';
+    font-size: clamp(16px, 1.5vw, 32px);
+}
+
+.copyright{
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: 0;
+    margin-top: 5%;
+    margin-right: 2vw;
+}
+
+.copyright span{
+    font-family: 'Abel';
+    color: #7E7E7E;
+    font-size: clamp(10px, 0.8vw, 20px);
+}
+
+/* ----------------------------------------------------------- */
+
+/* página "home" */
+
+#homepage{
+    .card-grid{
+        /* criando um grid (tabela) */
+    
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 2%;
+        gap: 3vw;
+    }
+    
+    .card-grid a{
+        text-decoration: none;
+    }
+    
+    .card{
+        /* alterando tamanho, cor e outras configurações do card */
+    
+        background-color: #383941;
+        border-radius: 8px;
+        width: 20vw;
+        height: 20vw;
+        text-align: center;
+        cursor: pointer;
+    
+        /* criando a animação de transição (ao passar o mouse sobre o card) */
+    
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .card:hover{
+        /* alterando o tamanho e a cor de fundo quando o mouse passa */
+    
+        transform: scale(1.05);
+        background-color: black;
+    }
+    
+    .card-top{
+        /* ajuste de posição e tamanho da imagem */
+    
+        height: 30%;
+        width: 100%;
+        background: url(img/card-top.png);
+        position: relative;
+        background-size: cover;
+        transform: scale(1.1);
+    }
+    
+    .card-bottom{
+        /* configurando a parte de baixo do card */
+    
+        align-content: center;
+        height: 70%;
+        width: 100%;
+    }
+    
+    .card-text{
+        /* configurando os textos básicos */
+    
+        display: grid;
+        grid-template-rows: repeat(3);
+        gap: 10%;
+    
+        box-sizing: border-box;
+        padding-top: 5%;
+        padding-bottom: 10%;
+        align-items: center;
+        text-align: start;
+        text-indent: clamp(2vh, 2vw, 6vw);
+    
+        max-width: 100%;
+        max-height: 100%;
+    
+        width: 100%;
+        height: 100%;
+    
+        /* background-color: red; */
+    
+        overflow: hidden;
+    }
+    
+    .card-info{
+        /* configurando o texto normal */
+    
+        font-family: 'ABeeZee', sans-serif;
+        font-size: clamp(0.8vh, 0.8vw, 10vh);
+        color: black;
+    }
+    
+    .card-valor{
+        /* configurando os títulos */
+    
+        font-family: 'Roboto Slab', serif;
+        font-weight: 500;
+        font-size: clamp(1.1vh, 1.3vw, 10vh);
+        color: #AB2020;
+    }
+    
+    .card-bottom img{
+        /* configurando o padrão de imagens dentro do card-bottom */
+    
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: fill;
+    }
+}
+
+/* página "sobre" */
+
+#sobre{
+    /* alterando o background da página */
+
+    background: url(img/sobreimg.png);
+
+    .navbar{
+        /* alterando a navbar */
+
+        background: none;
+        border-bottom: 1px solid white;
+    }
+
+    .titulo{
+        /* titulo da página "sobre" */
+
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-family: 'Andika', sans-serif;
+        font-size: clamp(30px, 5vw, 80px);
+        margin-top: 6vh;
+    }
+
+    .corpo{
+        /* corpo do texto */
+
+        color: white;
+        text-indent: 2em;
+        font-family: 'Abel';
+        font-size: clamp(15px, 2vw, 50px);
+        margin: 2vh 4vw;
+        text-align: justify;
+    }
+
+    .footer{
+        /* rodapé da página */
+
+        background-color: rgba(221, 192, 118, 0.5);
+        border-top: 1px solid white;
+        position: absolute;
+        bottom: 0;
+        width: 98%;
+    }
+
+    .copyright span{
+        /* alterando a cor dos direitos reservados */
+
+        color: white;
+    }
+}
+
+/* página "contato" */
+
+#contato{
+    .container{
+        /* container para dimensionamento dos elementos */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    hr{
+        /* linha horizontal */
+
+        margin-left: 30vw;
+        margin-right: 30vw;
+    }
+
+    .titulo{
+        /* definindo o título da página */
+
+        text-align: center;
+        color: black;
+        font-weight: bold;
+        font-family: 'Andika', sans-serif;
+        font-size: clamp(30px, 5vw, 80px);
+    }
+
+    .corpo, .corpo1{
+        /* corpo do texto */
+
+        color: black;
+        font-family: 'Abel';
+        font-size: clamp(20px, 1.5vw, 50px);
+        margin: auto;
+        text-align: center;
+    }
+    
+    .corpo{
+        font-weight: bold;
+    }
+
+    .corpo1{
+        margin-top: 2vh;
+    }
+
+    .card-grid-contato{
+        /* criando o grid dos cards */
+
+        display: flex;
+        padding: 1vw;
+        align-items: center;
+        cursor: pointer;
+        margin: 3vh 3vw;
+        gap: 4vw;
+    }
+
+    .card-contato{
+        /* criando os cards */
+
+        width: 20vw;
+        height: 30vh;
+        border: 1px solid dimgray;
+        border-radius: 8px;
+        padding: 5%;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 4px #ddd;
+        user-select: none;
+
+        /* criando animação */
+
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .card-contato .corpo{
+        /* arrumando a posição do texto */
+
+        position: relative;
+        bottom: 5vh;
+    }
+
+    .card-contato img{
+        /* configurando as imagens */
+
+        position: relative;
+        bottom: 5vh;
+        width: 100%;
+        height: auto;
+    }
+
+    .card-contato:hover{
+        /* animação */
+
+        transform: scale(1.05);
+    }
+       
+    #card1:hover{
+        background-color: green;
+    }
+
+    #card2:hover{
+        background-color: red;
+    }
+
+    #card3:hover{
+        background-color: blue;
+    }
+
+    .card-contato:hover img, .card-contato:hover .corpo{
+        filter: invert(1);
+    }
+
+    .footer{
+        /* rodapé da página */
+
+        position: absolute;
+        bottom: 0;
+        width: 98%;
+    }
+
+    @media (max-width: 1000px) {
+        .card-contato img{
+            padding-top: 5vh;
+        }
+    }
+}
+
+/* página "carpage" */
+
+#carpage{
+    .swiper-container{
+        width: 95%;
+        position: relative;
+        height: 40vh;
+        margin: 5vh auto;
+        overflow: hidden;
+    }
+
+    .swiper-wrapper{
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-slide img{
+        width: 520px;
+        height: 98%;
+        border: 1px solid gray;
+        box-shadow: 0 2px 4px gray;
+        border-radius: 50px;
+    }
+
+    .swiper-button-next, .swiper-button-prev{
+        color: #C01B1B;
+        transform: translateY(-43%);
+        height: 100%;
+    }
+
+    .swiper-button-prev{
+        left: 0;
+        background: linear-gradient(to left, transparent, white);
+    }
+
+    .swiper-button-next{
+        right: 0;
+        background: linear-gradient(to right, transparent, white);
+    }
+
+    .swiper-pagination-bullet{
+        background-color: #6A0B0B;
+    }
+
+    .swiper-pagination-bullet-active{
+        background-color: white;
+    }
+
+    .info-grid{
+        display: flex;
+        gap: 2vw;
+        padding: 1vw;
+        height: 50vh;
+        margin: 0 5vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info1, .info2{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        border: 1px solid gray;
+        border-radius: 8px;
+        box-sizing: border-box;
+        box-shadow: 0 2px 4px gray;
+    }
+
+    .info1{
+        width: 70%;
+    }
+
+    .info1-top, .info2-top{
+        display: flex;
+        height: 20%;
+        width: 100%;
+        align-items: center;
+        text-indent: 3vw;
+        border-bottom: 1px solid gray;
+        overflow: hidden;
+    }
+
+    .info1-top{
+        flex-grow: 1;
+    }
+
+    .info1-top-parte1, .info1-top-parte2{
+        display: flex;
+        width: 50%;
+        text-align: center;
+    }
+
+    .info1-top-parte2{
+        justify-content: end;
+        margin-right: 3vw;
+    }
+
+    .info-bottom{
+        display: flex;
+        height: 80%;
+    }
+
+    .info1-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1vw;
+        box-sizing: border-box;
+        width: calc(100% / 3);
+        height: 100%;
+    }
+
+    .info1-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: calc(100% / 3);
+    }
+
+    .marca-carro, .modelo-carro{
+        font-family: 'Abel';
+        font-size: clamp(10px, 4vw, 50px);
+        text-align: center;
+    }
+
+    .marca-carro{
+        color: black;
+    }
+
+    .modelo-carro{
+        color: #FF0000;
+    }
+    
+    .titulo, .titulo-info2, .parcela{
+        text-align: center;
+        font-family: 'Andika';
+        color: #C01B1B;
+        font-size: 24px;
+    }
+
+    .titulo-info2{
+        color: white;
+        font-weight: bold;
+        font-size: clamp(10px, 4vw, 50px);
+    }
+
+    .corpo{
+        text-align: center;
+        font-family: 'Abel';
+        color: #6A0B0B;
+        font-size: clamp(10px, 20px, 30px);
+    }
+
+    .valor{
+        font-family: 'Abel';
+        font-weight: bold;
+        font-size: clamp(10px, 4vw, 50px);
+        color: #C01B1B;
+    }
+    .valor::before{
+        content: "R$ ";
+    }
+
+    .info2{
+        width: 30%;
+        background-color: #6A0B0B;
+        border-color: black;
+    }
+
+    .info2-top{
+        border-bottom: 1px solid black;
+        text-indent: 0;
+        justify-content: center;
+    }
+
+    .parcelas{
+        margin: 1vw;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .parcela, .entrada{
+        color: white;
+        font-family: 'Abel';
+        font-size: 1.6vw;
+    }
+
+    .entrada{
+        font-size: 2vw;
+        font-weight: bold;
+        margin-bottom: 5vh;
+        text-align: center;
+    }
+
+    .entrada::before{
+        content: "R$ ";
+        font-family: 'Abel';
+    }
+
+    @media (max-width: 1600px) {
+        .titulo, .titulo-info2{
+            font-size: 2vw;
+        }
+    }
+}
+
+/* página "login" */
+
+#login{
+    background: url(img/garagem.png);    
+
+    .navbar{
+        background: none;
+        border-bottom: 1px solid white;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #login-card{
+        display: flex;
+        flex-direction: column;
+        width: 25vw;
+        height: 66vh;
+        position: absolute;
+        top: 20%;
+        box-shadow: 0 2px 4px black;
+        border: 2px solid white;
+        border-radius: 5%;
+        justify-content: start;
+        align-items: center;
+    }
+
+    #login-card img{
+        width: 12vw;
+        height: auto;
+        margin-bottom: 1vh;
+    }
+
+    .form{
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+    }
+
+    label{
+        color: white;
+        font-family: 'Andika';
+        font-size: clamp(8px, 1.2vw, 20px);
+        margin-bottom: 1vh;
+    }
+
+    input:not(#send){
+        border: 1px solid white;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.5);
+        height: 4vh;
+        width: 15vw;
+        margin-bottom: 1vh;
+        padding-left: 3%;
+        box-sizing: border-box;
+        color: white;
+        font-size: clamp(12px, 1vw, 30px);
+    }
+
+    input:focus{
+        outline: 2px solid white;
+    }
+
+    .button{
+        width: 15vw;
+        height: 4vh;
+        margin-top: 2vh;
+        background-color: rgb(13, 84, 11);
+        border: 1px solid white;
+        border-radius: 8px;
+        color: white;
+        font-family: 'Andika';
+        font-size: clamp(12px, 1vw, 30px);
+
+        transition: background-color 0.3s ease;
+    }
+
+    .button:hover{
+        background-color: rgb(24, 141, 20);
+        cursor: pointer;
+    }
+
+    .titulo{
+        color: white;
+        font-family: 'Andika';
+        font-weight: bold;
+        font-size: clamp(20px, 2vw, 40px);
+        margin-top: 5vh;
+    }
+}
+
+/* página "veiculos" */
+
+#veiculos{
+    .container{
+        width: 100%;
+    }
+
+    .titulo{
+        color: black;
+        font-family: 'Abel';
+        font-size: 1.5vw;
+        text-align: start;
+        margin-top: 6vh;
+        margin-left: 7vw;
+    }
+
+    .linha{
+        margin-bottom: 0;
+        margin-top: 1vh;
+    }
+
+    .barra-pesquisa{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
+
+    .pesquisa{
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        padding-top: 22px;
+        padding-bottom: 22px;
+        background-color: rgb(232, 232, 232);
+        border: 1px solid gray;
+        border-radius: 16px;
+        width: 80%;
+        height: 3.5vh;
+    }
+
+    .pesquisa img{
+        object-fit: cover;
+        width: auto;
+        height: 3vh;
+        margin: 0 0.5vw;
+    }
+
+    .pesquisa input{
+        width: 100%;
+        height: 3vh;
+        background: none;
+        border: none;
+        outline: none;
+        color: #6B6B70;
+        font-family: 'Abel';
+        font-size: 2vh;
+    }
+
+    .flex-container{
+        display: flex;
+        height: 120vh;
+        margin: 4vh 3vw;
+    }
+
+    .automoveis{
+        display: flex;
+        flex-direction: column;
+        gap: 1.36%;
+        width: 70%;
+    }
+
+    .automoveis a{
+        text-decoration: none;
+    }
+
+    .card-automovel{
+        display: flex;
+        gap: 1vw;
+        margin-right: 2vw;
+        height: 22.5vh;
+        background-color: rgb(232, 232, 232);
+        border: 1px solid gray;
+        box-shadow: 0 2px 4px gray;
+        border-radius: 16px;
+
+        transition: transform 0.3s ease;
+    }
+
+    .card-automovel:hover{
+        transform: scale(1.01);
+    }
+
+    .card-imagem{
+        width: 30%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .infos{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 100%;
+    }
+
+    .cabecalho{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 30%;
+    }
+
+    .nome-carro, .valor-carro{
+        width: 50%;
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    .nome-carro{
+        color: black;
+        text-align: start;
+        font-family: 'Andika';
+    }
+
+    .valor-carro{
+        color: #AB2020;
+        text-align: center;
+        font-family: 'Andika';
+    }
+
+    .corpo{
+        width: 100%;
+        height: 70%;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        box-sizing: border-box;
+        padding-right: 6%;
+    }
+
+    .texto{
+        text-indent: 2em;
+        font-family: 'Abel';
+        font-size: 18px;
+        text-align: justify;
+    }
+
+    .valor-carro::before{
+        content: "R$ ";
+    }
+
+    .linha-vertical{
+        width: 1px;
+        height: 100%;
+        background-color: gray;
+    }
+
+    .filtros{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        margin-left: 2vw;
+        height: 100%;
+        background-color: rgb(232, 232, 232);
+        box-shadow: 0 2px 4px gray;
+        border: 1px solid gray;
+        border-radius: 16px;
+    }
+
+    .filtro-titulo{
+        font-family: 'Andika';
+        font-size: 40px;
+        margin-top: 5vh;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .filtro-grupo{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .filtro-grupo .titulo{
+        font-family: 'Abel';
+        font-weight: bold;
+        margin: 0;
+        text-align: start;
+        margin-left: 2vw;
+        font-size: 20px;
+        margin-top: 4vh;
+        margin-bottom: 2vh;
+    }
+
+    .filtro-grupo input[type="checkbox"]{
+        appearance: none;
+        border: 1px solid black;
+        border-radius: 6px;
+        width: 1.2vw;
+        height: 1.2vw;
+    }
+
+    .filtro-grupo input[type="checkbox"]:checked{
+        background: url(img/checked.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .filtro-grupo .line{
+        display: flex;
+        gap: 0.5vw;
+        margin-left: 2vw;
+    }
+
+    .filtro-grupo label{
+        font-family: 'Abel';
+        font-size: 20px;
+    }
+
+    .button-layout{
+        display: flex;
+        height: 10vh;
+        justify-content: center;
+        gap: 10vw;
+    }
+
+    .page-counter, .page-back, .page-next{
+        margin-top: 4vh;
+        background-color: rgb(232, 232, 232);
+        border: 1px solid gray;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px gray;
+        color: black;
+        font-family: 'Abel';
+        font-size: 24px;
+        width: 15vw;
+        height: 8vh;
+    }
+
+    .page-back, .page-next{
+        transition: filter 0.2s ease-in-out;
+    }
+
+    .page-back{
+        background-color: #9E9E9E;
+        color: #6B6B70;
+    }
+
+    button:not(.page-counter):hover{
+        cursor: pointer;
+        filter: invert(1);
+    }
+}
+
+/* ----------------------------------------------------------- */
+
+/* classes gerais */
+
+.linha{
+    /* settando as margens padrão da linha horizontal */
+
+    margin: 2% 5% 2% 5%;
+}
+
+/* ----------------------------------------------------------- */
+
+/* eventos gerais */
+
+.navbar a:hover{
+    font-weight: bold;
+    font-size: clamp(16px, 1.6vw, 64px);
+}
+
+.extra-image:hover, .logo:hover{
+    transform: scale(1.1);
+}
+
+.card-valor::before{
+    content: "R$ ";
+}
+
+/* ----------------------------------------------------------- */
+
+/* configurações para diferentes resoluções de telas */
+
+@media (max-width: 768px) {
+    .navbar .logo{
+        width: 6vw;
+    }
+
+    .footer-item{
+        width: 25vw;
+    }
+}
