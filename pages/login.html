@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abel&family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&display=swap">
     </head>
     <body id="login">
-        <div class="navbar">
+        <div id="nav" class="navbar">
             <a href="../index.html"><img src="../img/carmaster-logo.png" alt="Logo Audi" class="logo"></a>
             <ul>
                 <li><a href="../index.html">HOME</a></li>
@@ -23,7 +23,19 @@
                 <li><a href="contato.html">CONTATE-NOS</a></li>
             </ul>
             <a id="user" href="#"><img src="../img/user-image.png" alt="Extra Image" id="user-image" class="extra-image"></a>
-            <img src="../img/settings.png" alt="Extra Image" class="extra-image">
+            <button onclick="showMenu()"><img src="../img/settings.png" alt="Extra Image" id="engrenagem" class="extra-image"></button>
+            
+            <div id="menu">
+                <button onclick="changeTheme()">
+                    <img src="../img/theme.png" alt="sair">
+                    <span>Alterar tema</span>
+                </button>
+
+                <button onclick="logoff()">
+                    <img src="../img/logoff.png" alt="sair">
+                    <span>Sair</span>
+                </button>
+            </div>
         </div>
 
         <div class="container">

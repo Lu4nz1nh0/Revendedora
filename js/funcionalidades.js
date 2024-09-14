@@ -1,11 +1,93 @@
 // tela de login
 
 document.addEventListener("DOMContentLoaded", () => {
+    let body = document.body;
+    let navbar = document.getElementById("nav");
+    let footer = document.getElementById("foo");
+    let cards = Array.from(document.querySelectorAll(".card"));
+    let cards_contato = Array.from(document.querySelectorAll(".card-contato"));
+
+    let tel = document.getElementById("tel");
+    let zap = document.getElementById("zap");
+    let inst = document.getElementById("inst");
+    let gmail = document.getElementById("gmail");
+    let face = document.getElementById("face");
+
+    let userimg = document.getElementById("user-image");
+    let settings = document.getElementById("engrenagem");
+
     if(sessionStorage.getItem("loginDone") === "true"){
         document.getElementById("user").href = "#";
+        
+        if(document.location.pathname.endsWith("revendedora_main/index.html")) userimg.src = "img/user-image-login-done.png";
+        else userimg.src = "../img/user-image-login-done.png";
+    }
 
-        userimg = document.getElementById("user-image");        
-        userimg.src = "../img/user-image-login-done.png";
+    if(sessionStorage.getItem("theme") === "dark"){
+        if(footer){
+            body.classList.remove("light-theme");
+            body.classList.add("dark-theme");
+        }
+
+        navbar.classList.add("light-theme");
+        navbar.classList.remove("dark-theme");
+
+        if(document.location.pathname.endsWith("revendedora_main/index.html")){
+            if(sessionStorage.getItem("loginDone") === "true") userimg.src = "img/user-image-login-done-dark.png";
+            else userimg.src = "img/user-image-dark.png";
+
+            settings.src = "img/settings-dark.png";
+        } else{
+            if(sessionStorage.getItem("loginDone") === "true") userimg.src = "../img/user-image-login-done-dark.png";
+            else userimg.src = "../img/user-image-dark.png";
+
+            settings.src = "../img/settings-dark.png";
+        }
+
+        if(footer){
+            footer.classList.add("light-theme");
+            footer.classList.remove("dark-theme");
+        }
+
+        if(footer){
+            if(document.location.pathname.endsWith("revendedora_main/index.html")){
+                tel.src = "img/telefone-dark.png";
+                zap.src = "img/zap-dark.png";
+                inst.src = "img/inst-dark.png";
+                gmail.src = "img/gmail-dark.png";
+                face.src = "img/face-dark.png";
+            } else{
+                tel.src = "../img/telefone-dark.png";
+                zap.src = "../img/zap-dark.png";
+                inst.src = "../img/inst-dark.png";
+                gmail.src = "../img/gmail-dark.png";
+                face.src = "../img/face-dark.png";
+            }
+        }
+
+        cards.forEach((card) => {
+            card.style.backgroundColor = "gray";
+        });
+
+        cards_contato.forEach((card) => {
+            card.style.border = "1px solid white";
+            card.style.backgroundColor = "rgb(150, 150, 150)";
+        });
+    } else{
+        body.classList.remove("dark-theme");
+        body.classList.add("light-theme");
+
+        navbar.classList.add("dark-theme");
+        navbar.classList.remove("light-theme");
+
+        if(footer){
+            footer.classList.add("dark-theme");
+            footer.classList.remove("light-theme");
+        }
+
+        cards.forEach((card) => {
+            card.style.border = "none";
+        });
     }
 });
 
@@ -27,14 +109,16 @@ document.querySelectorAll("input").forEach(input => {
     })
 });
 
-document.getElementById("login-card").addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    user = document.getElementById("user").value;
-    pass = document.getElementById("pass").value;
-
-    checkLogin(user, pass);
-});
+if(document.getElementById("login-card")){
+    document.getElementById("login-card").addEventListener("submit", (event) => {
+        event.preventDefault();
+    
+        user = document.getElementById("user").value;
+        pass = document.getElementById("pass").value;
+    
+        checkLogin(user, pass);
+    });
+}
 
 function checkLogin(user, password){
     if(user === "admin@gmail.com" && password === "1234"){
@@ -49,4 +133,59 @@ function checkLogin(user, password){
     }
 }
 
-// document.getElementById("")
+// tela de configurações
+
+// variáveis
+
+let imagem_eng = document.getElementById("engrenagem");
+
+// funções
+
+function rotateSettings(menu){
+    if(menu.getAttribute("id") === "settings"){
+        if(document.location.pathname.endsWith("revendedora_main/index.html")){
+            if(sessionStorage.getItem("theme") === "dark") imagem_eng.src = "img/settings-dark.png";
+            else imagem_eng.src = "img/settings.png";
+        } else{
+            if(sessionStorage.getItem("theme") === "dark") imagem_eng.src = "../img/settings-dark.png";
+            else imagem_eng.src = "../img/settings.png";
+        }
+
+        imagem_eng.style.transform = "rotate(-45deg)";
+        imagem_eng.style.scale = "1";
+        
+    } else{
+        if(document.location.pathname.endsWith("revendedora_main/index.html")) imagem_eng.src = "img/settings-clicked.png";
+        else imagem_eng.src = "../img/settings-clicked.png";
+
+        imagem_eng.style.transform = "rotate(45deg)";
+        imagem_eng.style.scale = "1.1";
+    }
+}
+
+function clickedOff(event){
+    if(event.target !== document.getElementById("settings")) document.getElementById("settings").setAttribute("id", "menu");
+}
+
+function showMenu(){
+    const MENU = document.getElementById("menu") || document.getElementById("settings");
+
+    rotateSettings(MENU);
+
+    if(MENU.getAttribute("id") === "menu") MENU.setAttribute("id", "settings");
+    else MENU.setAttribute("id", "menu");
+}
+
+function changeTheme(){
+    if(sessionStorage.getItem("theme") === "light" || !sessionStorage.getItem("theme")) sessionStorage.setItem("theme", "dark");
+    else sessionStorage.setItem("theme", "light");
+    
+    document.location.reload();
+}
+
+function logoff(){
+    if(sessionStorage.getItem("loginDone") === "true"){
+        sessionStorage.setItem("loginDone", "false");
+        document.location.reload();
+    }
+}

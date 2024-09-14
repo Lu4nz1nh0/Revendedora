@@ -8,6 +8,7 @@ body {
     margin: 0;
     user-select: none;
     font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s ease;
 }
 
 /* ----------------------------------------------------------- */
@@ -25,6 +26,7 @@ body {
     min-height: 6vh;
     align-items: center;
     background-color: #383941;
+    color: white;
     height: clamp(6vh, 6vw, 8vh);
     padding: 1vh;
 }
@@ -62,8 +64,8 @@ body {
 .navbar a{
     /* configurando os links */
 
-    color: white;
     font-family: 'Abel';
+    color: inherit;
 
     text-decoration: none;
     font-size: clamp(16px, 1.5vw, 32px);
@@ -86,6 +88,58 @@ body {
     transition: transform 0.3s ease;
 }
 
+.navbar button{
+    background: none;
+    border: none;
+    width: 4vw;
+    height: auto;
+    margin-right: 1vw;
+}
+
+#menu{
+    display: none;
+}
+
+#settings{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: auto;
+    background-color: #212125;
+    padding: 10px;
+    border-top: 1px solid white;
+    border-radius: 10px 0 0 10px;
+    position: absolute;
+    right: 0;
+    top: 10vh;
+}
+
+#settings button{
+    display: flex;
+    align-items: center;
+    text-align: start;
+    padding: 2%;
+    color: white;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+#settings button:hover{
+    background-color: #6B6B70;
+    font-weight: bold;
+}
+
+#settings button img{
+    height: 2.5vh;
+    margin: 0 1vw;
+    width: auto;
+}
+
+#settings button span{
+    font-family: 'Abel';
+    font-size: 18px;
+}
+
 .novidades{
     /* configurando o título */
 
@@ -93,6 +147,20 @@ body {
     font-family: 'Andika', sans-serif;
     font-size: clamp(30px, 4vw, 60px);
     margin-top: 20px;
+}
+
+#engrenagem{
+    transition: transform 0.5s ease, scale 0.3s ease;
+}
+
+.dark-theme{
+    background-color: #383941 !important;
+    color: white !important;
+}
+
+.light-theme{
+    background-color: whitesmoke !important;
+    color: black !important;
 }
 
 /* ----------------------------------------------------------- */
@@ -106,6 +174,7 @@ body {
     align-items: center;
     justify-content: start;
     background-color: #383941;
+    color: white;
     padding: 1vw;
 }
 
@@ -137,7 +206,7 @@ body {
 }
 
 .footer span{
-    color: white;
+    color: inherit;
     text-indent: clamp(0.8vh, 0.8vw, 6vw);
     font-family: 'Abel';
     font-size: clamp(16px, 1.5vw, 32px);
@@ -198,7 +267,7 @@ body {
         /* alterando o tamanho e a cor de fundo quando o mouse passa */
     
         transform: scale(1.05);
-        background-color: black;
+        background-color: black !important;
     }
     
     .card-top{
@@ -349,7 +418,7 @@ body {
         /* definindo o título da página */
 
         text-align: center;
-        color: black;
+        color: inherit;
         font-weight: bold;
         font-family: 'Andika', sans-serif;
         font-size: clamp(30px, 5vw, 80px);
@@ -358,7 +427,6 @@ body {
     .corpo, .corpo1{
         /* corpo do texto */
 
-        color: black;
         font-family: 'Abel';
         font-size: clamp(20px, 1.5vw, 50px);
         margin: auto;
@@ -367,10 +435,12 @@ body {
     
     .corpo{
         font-weight: bold;
+        color: black;
     }
 
     .corpo1{
         margin-top: 2vh;
+        color: inherit;
     }
 
     .card-grid-contato{
@@ -395,6 +465,7 @@ body {
         justify-content: center;
         align-items: center;
         box-shadow: 0 2px 4px #ddd;
+        background-color: white;
         user-select: none;
 
         /* criando animação */
@@ -425,15 +496,15 @@ body {
     }
        
     #card1:hover{
-        background-color: green;
+        background-color: green !important;
     }
 
     #card2:hover{
-        background-color: red;
+        background-color: red !important;
     }
 
     #card3:hover{
-        background-color: blue;
+        background-color: blue !important;
     }
 
     .card-contato:hover img, .card-contato:hover .corpo{
@@ -494,12 +565,12 @@ body {
 
     .swiper-button-prev{
         left: 0;
-        background: linear-gradient(to left, transparent, white);
+        background: linear-gradient(to left, transparent, whitesmoke);
     }
 
     .swiper-button-next{
         right: 0;
-        background: linear-gradient(to right, transparent, white);
+        background: linear-gradient(to right, transparent, whitesmoke);
     }
 
     .swiper-pagination-bullet{
@@ -775,12 +846,16 @@ body {
     }
 
     .titulo{
-        color: black;
+        color: inherit;
         font-family: 'Abel';
         font-size: 1.5vw;
         text-align: start;
         margin-top: 6vh;
         margin-left: 7vw;
+    }
+
+    .filtros .titulo, label{
+        color: black;
     }
 
     .linha{
@@ -1022,7 +1097,7 @@ body {
         color: #6B6B70;
     }
 
-    button:not(.page-counter):hover{
+    .pages:not(.page-counter):hover{
         cursor: pointer;
         filter: invert(1);
     }
