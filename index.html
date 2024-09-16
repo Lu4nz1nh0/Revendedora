@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abel&family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&display=swap">
     </head>
     <body id="homepage">
-        <div class="navbar">
+        <div id="nav" class="navbar">
             <a href="#"><img src="img/carmaster-logo.png" alt="Logo Audi" class="logo"></a>
             <ul>
                 <li><a href="#">HOME</a></li>
@@ -23,7 +23,19 @@
                 <li><a href="pages/contato.html">CONTATE-NOS</a></li>
             </ul>
             <a id="user" href="pages/login.html"><img src="img/user-image.png" alt="Extra Image" id="user-image" class="extra-image"></a>
-            <img src="img/settings.png" alt="Extra Image" class="extra-image">
+            <button onclick="showMenu()"><img src="img/settings.png" alt="Extra Image" id="engrenagem" class="extra-image"></button>
+            
+            <div id="menu">
+                <button onclick="changeTheme()">
+                    <img src="img/theme.png" alt="sair">
+                    <span>Alterar tema</span>
+                </button>
+
+                <button onclick="logoff()">
+                    <img src="img/logoff.png" alt="sair">
+                    <span>Sair</span>
+                </button>
+            </div>
         </div>
 
         <div class="novidades">
@@ -33,7 +45,7 @@
         <hr class="linha">
 
         <div class="card-grid">
-            <a href="pages/car.html">
+            <a href="pages/car1.html">
                 <div class="card">
                     <div class="card-top">
                         <div class="card-text">
@@ -48,7 +60,7 @@
                 </div>
             </a>
                 
-            <a href="pages/car.html">
+            <a href="pages/car2.html">
                 <div class="card">
                     <div class="card-top">
                         <div class="card-text">
@@ -63,7 +75,7 @@
                 </div>
             </a>
                 
-            <a href="pages/car.html">
+            <a href="pages/car3.html">
                 <div class="card">
                     <div class="card-top">
                         <div class="card-text">
@@ -78,7 +90,7 @@
                 </div>
             </a>
             
-            <a href="pages/car.html">
+            <a href="pages/car4.html">
                 <div class="card">
                     <div class="card-top">
                         <div class="card-text">
@@ -93,7 +105,7 @@
                 </div>
             </a>
             
-            <a href="pages/car.html">
+            <a href="pages/car5.html">
                 <div class="card">
                     <div class="card-top">
                         <div class="card-text">
@@ -108,7 +120,7 @@
                 </div>
             </a>
             
-            <a href="pages/car.html">
+            <a href="pages/car6.html">
                 <div class="card">
                     <div class="card-top">
                         <div class="card-text">
@@ -123,7 +135,7 @@
                 </div>
             </a>
             
-            <a href="pages/car.html">
+            <a href="pages/car7.html">
                 <div class="card">
                     <div class="card-top">
                         <div class="card-text">
@@ -138,7 +150,7 @@
                 </div>
             </a>
             
-            <a href="pages/car.html">
+            <a href="pages/car8.html">
                 <div class="card">
                     <div class="card-top">
                         <div class="card-text">
@@ -155,22 +167,22 @@
         </div>
 
         <footer>
-            <div class="footer">
+            <div id="foo" class="footer">
                 <div class="footer-item">
                     <ul>
-                        <li><img src="img/zap.png" alt="WhatsApp"><span>(49) 99912-3456</span></li>
-                        <li><img src="img/inst.png" alt="Instagram"><span>@carmaster</span></li>
+                        <li><img id="zap" src="img/zap.png" alt="WhatsApp"><span>(49) 99912-3456</span></li>
+                        <li><img id="inst" src="img/inst.png" alt="Instagram"><span>@carmaster</span></li>
                     </ul>
                 </div>
                 <div class="footer-item">
                     <ul>
-                        <li><img src="img/face.png" alt="Facebook"><span>CarMasterOficial</span></li>
-                        <li><img src="img/gmail.png" alt="Gmail"><span>carmaster@gmail.com</span></li>
+                        <li><img id="face" src="img/face.png" alt="Facebook"><span>CarMasterOficial</span></li>
+                        <li><img id="gmail" src="img/gmail.png" alt="Gmail"><span>carmaster@gmail.com</span></li>
                     </ul>
                 </div>
                 <div class="footer-item">
                     <ul>
-                        <li><img src="img/telefone.png" alt="Telefone"><span>3567-1234</span></li>
+                        <li><img id="tel" src="img/telefone.png" alt="Telefone"><span>3567-1234</span></li>
                     </ul>
                 </div>
                 <div class="copyright">

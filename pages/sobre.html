@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abel&family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&display=swap">
     </head>
     <body id="sobre">
-        <div class="navbar">
+        <div id="nav" class="navbar">
             <a href="../index.html"><img src="../img/carmaster-logo.png" alt="Logo Audi" class="logo"></a>
             <ul>
                 <li><a href="../index.html">HOME</a></li>
@@ -23,7 +23,19 @@
                 <li><a href="contato.html">CONTATE-NOS</a></li>
             </ul>
             <a id="user" href="login.html"><img src="../img/user-image.png" alt="Extra Image" id="user-image" class="extra-image"></a>
-            <img src="../img/settings.png" alt="Extra Image" class="extra-image">
+            <button onclick="showMenu()"><img src="../img/settings.png" alt="Extra Image" id="engrenagem" class="extra-image"></button>
+            
+            <div id="menu">
+                <button onclick="changeTheme()">
+                    <img src="../img/theme.png" alt="sair">
+                    <span>Alterar tema</span>
+                </button>
+
+                <button onclick="logoff()">
+                    <img src="../img/logoff.png" alt="sair">
+                    <span>Sair</span>
+                </button>
+            </div>
         </div>
 
         <div>
@@ -37,21 +49,24 @@
             <div class="footer">
                 <div class="footer-item">
                     <ul>
-                        <li><img src="../img/zap.png" alt="WhatsApp"><span>(49) 99912-3456</span></li>
-                        <li><img src="../img/inst.png" alt="Instagram"><span>@carmaster</span></li>
+                        <li><img id="zap" src="../img/zap.png" alt="WhatsApp"><span>(49) 99912-3456</span></li>
+                        <li><img id="inst" src="../img/inst.png" alt="Instagram"><span>@carmaster</span></li>
                     </ul>
                 </div>
+
                 <div class="footer-item">
                     <ul>
-                        <li><img src="../img/face.png" alt="Facebook"><span>CarMasterOficial</span></li>
-                        <li><img src="../img/gmail.png" alt="Gmail"><span>carmaster@gmail.com</span></li>
+                        <li><img id="face" src="../img/face.png" alt="Facebook"><span>CarMasterOficial</span></li>
+                        <li><img id="gmail" src="../img/gmail.png" alt="Gmail"><span>carmaster@gmail.com</span></li>
                     </ul>
                 </div>
+
                 <div class="footer-item">
                     <ul>
-                        <li><img src="../img/telefone.png" alt="Telefone"><span>3567-1234</span></li>
+                        <li><img id="tel" src="../img/telefone.png" alt="Telefone"><span>3567-1234</span></li>
                     </ul>
                 </div>
+
                 <div class="copyright">
                     <span>@ 2024 Copyright CarMasters</span>
                 </div>

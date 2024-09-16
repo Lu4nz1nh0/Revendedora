@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Veículos - AUDI R8</title>
+        <link rel="stylesheet" href="../style.css">
+        
+        <!-- importação de fontes do google fonts -->
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Roboto+Slab:wght@100..900&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abel&family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&display=swap">
+
+        <!-- importação dos estilos do swiper -->
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    </head>
+    <body id="carpage">
+        <div id="nav" class="navbar">
+            <a href="../index.html"><img src="../img/carmaster-logo.png" alt="Logo Audi" class="logo"></a>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="veiculos.html">VEÍCULOS</a></li>
+                <li><a href="sobre.html">SOBRE</a></li>
+                <li><a href="contato.html">CONTATE-NOS</a></li>
+            </ul>
+            <a id="user" href="login.html"><img src="../img/user-image.png" alt="Extra Image" id="user-image" class="extra-image"></a>
+            <button onclick="showMenu()"><img src="../img/settings.png" alt="Extra Image" id="engrenagem" class="extra-image"></button>
+            
+            <div id="menu">
+                <button onclick="changeTheme()">
+                    <img src="../img/theme.png" alt="sair">
+                    <span>Alterar tema</span>
+                </button>
+
+                <button onclick="logoff()">
+                    <img src="../img/logoff.png" alt="sair">
+                    <span>Sair</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="../img/carpage8/carpage1.png">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../img/carpage8/carpage2.png">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../img/carpage8/carpage3.png">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../img/carpage8/carpage4.png">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../img/carpage8/carpage5.png">
+                </div>
+            </div>
+
+            <div id="prev" class="swiper-button-prev"></div>
+            <div id="next" class="swiper-button-next"></div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <hr class="linha">
+
+        <div class="info-grid">
+            <div class="info1">
+                <div class="info1-top">
+                    <div class="info1-top-parte1">
+                        <p><span class="marca-carro">AUDI </span><span class="modelo-carro">R8</span></p>
+                    </div>
+
+                    <div class="info1-top-parte2">
+                        <p><span class="valor">1.500.900,00</span></p>
+                    </div>
+                </div>
+
+                <div class="info-bottom">
+                    <div class="info1-item">
+                        <div class="info1-info">
+                            <span class="titulo">CIDADE</span>
+                            <span class="corpo">FLORIANÓPOLIS-SC</span>
+                        </div>
+
+                        <div class="info1-info">
+                            <span class="titulo">IPVA PAGO</span>
+                            <span class="corpo">SIM</span>
+                        </div>
+
+                        <div class="info1-info">
+                            <span class="titulo">ÚNICO DONO</span>
+                            <span class="corpo">SIM</span>
+                        </div>
+                    </div>
+
+                    <div class="info1-item">
+                        <div class="info1-info">
+                            <span class="titulo">COMBUSTÍVEL</span>
+                            <span class="corpo">GASOLINA</span>
+                        </div>
+
+                        <div class="info1-info">
+                            <span class="titulo">KM</span>
+                            <span class="corpo">27.000</span>
+                        </div>
+
+                        <div class="info1-info">
+                            <span class="titulo">CÂMBIO</span>
+                            <span class="corpo">AUTOMÁTICO</span>
+                        </div>
+                    </div>
+
+                    <div class="info1-item">
+                        <div class="info1-info">
+                            <span class="titulo">COR</span>
+                            <span class="corpo">CINZA</span>
+                        </div>
+
+                        <div class="info1-info">
+                            <span class="titulo">VELOCIDADE MÁXIMA</span>
+                            <span class="corpo">324 KM / H</span>
+                        </div>
+
+                        <div class="info1-info">
+                            <span class="titulo">ANO</span>
+                            <span class="corpo">2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info2">
+                <div class="info2-top">
+                    <span class="titulo-info2">SIMULADOR DE FINANCIAMENTOS</span>
+                </div>
+
+                <form>
+                    <div class="grupo-form">
+                        <input type="text" placeholder="Nome completo*">
+                        <input type="text" placeholder="Data de nascimento*">
+                    </div>
+
+                    <div class="grupo-form">
+                        <input type="text" placeholder="E-mail*">
+                        <input type="text" placeholder="CPF*">
+                    </div>
+
+                    <div class="grupo-form">
+                        <input type="text" placeholder="Celular*">
+                        <select>
+                            <option value="" disabled selected hidden>Localização - Estado*</option>
+                            <option value="AC">Acre (AC)</option>
+                            <option value="AL">Alagoas (AL)</option>
+                            <option value="AM">Amazonas (AM)</option>
+                            <option value="BA">Bahia (BA)</option>
+                            <option value="CE">Ceará (CE)</option>
+                            <option value="DF">Distrito Federal (DF)</option>
+                            <option value="ES">Espírito Santo (ES)</option>
+                            <option value="GO">Goiás (GO)</option>
+                            <option value="MA">Maranhão (MA)</option>
+                            <option value="MT">Mato Grosso (MT)</option>
+                            <option value="MS">Mato Grosso do Sul (MS)</option>
+                            <option value="MG">Minas Gerais (MG)</option>
+                            <option value="PA">Pará (PA)</option>
+                            <option value="PB">Paraíba (PB)</option>
+                            <option value="PR">Paraná (PR)</option>
+                            <option value="PE">Pernambuco (PE)</option>
+                            <option value="PI">Piauí (PI)</option>
+                            <option value="RJ">Rio de Janeiro (RJ)</option>
+                            <option value="RN">Rio Grande do Norte (RN)</option>
+                            <option value="RS">Rio Grande do Sul (RS)</option>
+                            <option value="RO">Rondônia (RO)</option>
+                            <option value="RR">Roraima (RR)</option>
+                            <option value="SC">Santa Catarina (SC)</option>
+                            <option value="SP">São Paulo (SP)</option>
+                            <option value="SE">Sergipe (SE)</option>
+                            <option value="TO">Tocantins (TO)</option>
+                        </select>
+                    </div>
+
+                    <div class="informacoes-simulacao">
+                        <p>
+                            *Campo obrigatório.<br>
+                            *Financiamento será feito pelo Santander Financiamentos.
+                        </p>
+                    </div>
+                </form>
+                
+                <div class="parcelas-layout">
+                    <button id="verparcelas">Ver parcelas</button>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div id="foo" class="footer">
+                <div class="footer-item">
+                    <ul>
+                        <li><img id="zap" src="../img/zap.png" alt="WhatsApp"><span>(49) 99912-3456</span></li>
+                        <li><img id="inst" src="../img/inst.png" alt="Instagram"><span>@carmaster</span></li>
+                    </ul>
+                </div>
+
+                <div class="footer-item">
+                    <ul>
+                        <li><img id="face" src="../img/face.png" alt="Facebook"><span>CarMasterOficial</span></li>
+                        <li><img id="gmail" src="../img/gmail.png" alt="Gmail"><span>carmaster@gmail.com</span></li>
+                    </ul>
+                </div>
+
+                <div class="footer-item">
+                    <ul>
+                        <li><img id="tel" src="../img/telefone.png" alt="Telefone"><span>3567-1234</span></li>
+                    </ul>
+                </div>
+
+                <div class="copyright">
+                    <span>@ 2024 Copyright CarMasters</span>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script src="../js/swiperfunc.js" defer></script>
+        <script src="../js/funcionalidades.js" defer></script>
+    </body>
+</html>
